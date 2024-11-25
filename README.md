@@ -9,9 +9,27 @@
 └── Makefile                 
 ```
 
-## 2. Implementation Details
+## 2. Repository Information
+Private GitHub Repository: https://github.com/mrayhankhan/SimpleMultithreader
 
-### 2.1 Key Components
+### Contributors
+1. M Rayhankhan (2022269)
+   - Implemented parallel_for 1D functionality
+   - Developed vector addition example
+   - Added thread timing measurements
+   - Implemented error handling for thread creation
+   - Documentation of core functionality
+
+2. Raunak Kumar Giri (2023427)
+   - Implemented parallel_for 2D functionality
+   - Developed matrix multiplication example
+   - Added resource cleanup mechanisms
+   - Implemented work distribution logic
+   - Documentation of setup and usage
+
+## 3. Implementation Details
+
+### 3.1 Key Components
 
 **Data Structures:**
 ```cpp
@@ -36,21 +54,21 @@ struct ThreadData2D {
 1. `parallel_for` (1D): Parallelizes single-dimension operations
 2. `parallel_for` (2D): Parallelizes two-dimension operations
 
-### 2.2 Key Features
+### 3.2 Key Features
 - Creates new threads for each parallel_for call (no thread pooling)
 - Main thread participates in computation
 - Even work distribution among threads
 - Built-in execution time measurement
 - Error handling for invalid inputs
 
-## 3. Setup & Usage
+## 4. Setup & Usage
 
-### 3.1 Requirements
+### 4.1 Requirements
 - Linux OS
 - G++ with C++11
 - pthread library
 
-### 3.2 Build & Run
+### 4.2 Build & Run
 ```bash
 # Build both examples
 make
@@ -64,7 +82,7 @@ Example: ./vector 4 1000000
 Example: ./matrix 4 1024
 ```
 
-## 4. Implementation Choices
+## 5. Implementation Choices
 
 1. **Thread Management:**
    - New threads created per call
@@ -80,7 +98,7 @@ Example: ./matrix 4 1024
    - Thread creation checks
    - Resource cleanup on failure
 
-## 5. Testing
+## 6. Testing
 - Vector addition (1D parallel test)
 - Matrix multiplication (2D parallel test)
 - Both examples include correctness verification
